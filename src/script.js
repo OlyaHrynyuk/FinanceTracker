@@ -15,22 +15,23 @@ function saveTransactions() {
 function addTransaction(e) {
     e.preventDefault(); // Запобігає перезавантаженню сторінки
 
+    // *ВИПРАВЛЕНО: Отримуємо значення input'ів тут*
     const description = document.getElementById('description').value;
     const amount = parseFloat(document.getElementById('amount').value);
 
-    if (description.trim() === '' || isNaN(amount)) {
+    if (description.trim() === ''  isNaN(amount)  amount === 0) {
         alert('Будь ласка, введіть коректний опис та суму.');
         return;
     }
 
     const transaction = {
-        id: Date.now(), // Унікальний ID
+        id: Date.now(), 
         description,
-        amount: amount.toFixed(2) // Зберігаємо з 2 знаками після коми
+        amount: amount.toFixed(2) 
     };
 
     transactions.push(transaction);
-    saveTransactions(); // Зберігаємо в Local Storage
+    saveTransactions(); 
     updateUI(); // Оновлюємо інтерфейс
     
     // Очищуємо форму
@@ -45,14 +46,20 @@ function updateUI() {
     balanceDisplay.textContent = ${total.toFixed(2)};
 
     // B. Оновлення Історії
-    transactionList.innerHTML = ''; // Очищуємо список
+    transactionList.innerHTML = ''; // Очищуємо список перед додаванням нових елементів
+    
     transactions.forEach(transaction => {
         const li = document.createElement('li');
-        li.classList.add(transaction.amount > 0 ? 'plus' : 'minus');
+        
+        // Визначаємо клас для стилів (зелений/червоний)
+        li.classList.add(parseFloat(transaction.amount) > 0 ? 'plus' : 'minus'); 
+        
+        // Створення вмісту елемента списку
         li.innerHTML = `
             ${transaction.description} <span>${transaction.amount} UAH</span>
         `;
-        transactionList.appendChild(li);
+        // *ВАЖЛИВО: Додаємо елемент до HTML*
+        transactionList.appendChild(li); 
     });
 }
 

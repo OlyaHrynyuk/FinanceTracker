@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4ff;
     padding: 20px;
 }
 
@@ -28,7 +28,7 @@ body {
     cursor: pointer;
 }
 
-/* СТИЛІ ДЛЯ ІСТОРІЇ ТРАНЗАКЦІЙ (ВИПРАВЛЕННЯ) */
+/* СТИЛІ ДЛЯ ІСТОРІЇ ТРАНЗАКЦІЙ (для відображення елементів) */
 #transaction-list {
     list-style: none; /* Прибираємо стандартні маркери */
     padding: 0;

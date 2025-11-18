@@ -1,24 +1,39 @@
-<header>
-    <h1> Finance Tracker</h1>
-</header>
-<main>
-    <div id="current-balance">
-        <h2>Поточний Баланс: <span id="balance-display">0.00</span> UAH</h2>
-    </div>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="src/styles/style.css"> 
+</head>
+<body>
 
-    <section id="new-transaction">
-        <h3>Додати Нову Транзакцію</h3>
-        <form id="transaction-form">
-            <input type="text" id="description" placeholder="Опис (Зарплата, Кава, тощо)" required>
-            <input type="number" id="amount" placeholder="Сума (100.00 або -50.00)" required>
-            
-            <button type="submit">Додати</button>
-        </form>
-    </section>
+    <header>
+        <h1>💰 Finance Tracker</h1>
+    </header>
+    
+    <main>
+        <div id="current-balance">
+            <h2>Поточний Баланс: <span id="balance-display">0.00</span> UAH</h2>
+        </div>
 
-    <section id="history">
-        <h3>Історія Транзакцій</h3>
-        <ul id="transaction-list">
-            </ul>
-    </section>
-</main>
+        <section id="new-transaction">
+            <h3>Додати Нову Транзакцію</h3>
+            <form id="transaction-form">
+                <input type="text" id="description" placeholder="Опис (Зарплата, Кава, тощо)" required>
+                <input type="number" id="amount" placeholder="Сума (100.00 або -50.00)" required> 
+                
+                <button type="submit">Додати</button>
+            </form>
+        </section>
+
+        <section id="history">
+            <h3>Історія Транзакцій</h3>
+            <ul id="transaction-list">
+                </ul>
+        </section>
+    </main>
+    
+    <script src="src/script.js"></script> 
+</body>
+</html>
