@@ -25,8 +25,9 @@
 Щоб запустити проєкт локально:
 
 1.  Клонуйте репозиторій:
-       git clone [https://github.com/OlyaHmyuk/FinanceTracker.git](https://github.com/OlyaHmyuk/FinanceTracker.git)
+       git clone [https://github.com/OlyaHrynuk/FinanceTracker.git](https://github.com/OlyaHmyuk/FinanceTracker.git)
     2.  Перейдіть у папку проєкту:
        cd FinanceTracker
     3.  Відкрийте файл `index.html` у будь-якому сучасному веб-браузері (наприклад, Chrome або Firefox).
+
 
